@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class AccountController {
 
 	// signup.jsp 폼만을 호출하기 위한 메소드
-	@RequestMapping(value = "", method = RequestMethod.GET)							// GET방식일 때만 이 메소드를 사용			 
+	@RequestMapping(value = "", method = RequestMethod.GET)									// GET방식일 때만 이 메소드를 사용			 
 	public String signup() {																// GET이냐 POST와는 상관없이 그냥 쓰고싶다. 그러면 method지우면됨
 		
 		return "signup";	// signup.jsp로 이동	

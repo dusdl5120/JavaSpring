@@ -6,7 +6,7 @@
 <title>sign up</title>
 </head>
 <body>
-	<form method="post" action="">
+	<form method="post" action="">				<!-- 이때 method=post는 Controller에서 post메소드로 가라 -->
 		<fieldset style="text-align: left;">
 			<legend>회원가입</legend>
 				<div>

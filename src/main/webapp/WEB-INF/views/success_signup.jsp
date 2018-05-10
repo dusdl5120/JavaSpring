@@ -6,8 +6,8 @@
 <title></title>
 
 </head>
-<body>
-	<div>아이디 : ${id }</div>
+<body>			
+	<div>아이디 : ${id }</div>				
 	<div>비밀번호 : ${passwd }</div>
 	<div>이메일 : ${email }</div>
 
