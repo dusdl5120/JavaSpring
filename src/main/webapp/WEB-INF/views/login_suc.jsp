@@ -11,8 +11,8 @@
 </head>
 <body>
 	<div>
-		<div>id : ${id }</div>
-		<div>password: ${passwd }</div>
+		<div>id : ${user.id }</div>
+		<div>password: ${user.passwd }</div>
 		
 		로그인되었습니다. <br />
 	</div>

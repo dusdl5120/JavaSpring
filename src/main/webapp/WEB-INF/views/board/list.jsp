@@ -1,45 +1,53 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title></title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<title>Insert title here</title>
 </head>
 <body>
 	<div class="container">
-	<h1>게시판</h1>
-		<table class="table table-hover">
-			<thead>
+		<div class="row"> 
+			<h3>게시판</h3>
+		</div>
+		<div class="row">
+		<table class="table table-dark table-striped">
+		    <thead>
 				<tr>
-					<th>번호</th>
-					<th>제목</th>
-					<th>작성자</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>${board.number }</td>
-					<td><a href="/board/detail">${board.title }</a></td>
-					<td>${board.author }</td>
-				</tr>
-				<tr>
-					<td>Mary</td>
-					<td>Moe</td>
-					<td>mary@example.com</td>
-				</tr>
-				<tr>
-					<td>July</td>
-					<td>Dooley</td>
-					<td>july@example.com</td>
-				</tr>
-			</tbody>
-		</table>
-		<button type="button" class="btn btn-primary" onclick="location.href='/'">HOME</button>
-		<button type="button" class="btn btn-primary" onclick="location.href='/board/insert'">글쓰기</button>
+		        	<th>번호</th>
+		        	<th>제목</th>
+		        	<th>작성자</th>
+		      	</tr>
+		    </thead>
+		    
+		    <tbody>
+		    	<!-- c:forEach 태그를 이용하여 리스트의 값을 하나씩 테이블 행에 출력 -->
+		    	<c:forEach var="board" items="${list}">
+			    	<tr>
+		    			<td>${board.number}</td>
+			        	<td><a href="#">${board.title}</a></td>
+			        	<td>${board.author}</td>
+			        </tr>
+		        </c:forEach>
+		    </tbody>
+		  </table>
+		  <a href="/main">
+		  	<button class="btn btn-default"> 홈 </button>
+		  </a>
+		  <a href="/board/write" style="margin: 0 0 0 10px;">
+		  	<button class="btn btn-default"> 글쓰기 </button>
+		  </a>
+		</div>
 	</div>
+	
 </body>
 </html>

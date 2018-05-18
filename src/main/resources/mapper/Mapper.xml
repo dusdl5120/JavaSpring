@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="kr.green.javaspring.dao.Mapper">
+ 
+  <select id="getId" resultType="String">
+    select 
+    	id 
+    from 
+    	account 
+    where 
+    	id = #{id}
+  </select>
+  
+  
+  <select id="getPasswd" resultType="String">
+    select 
+    	passwd 
+    from 
+    	account 
+    where 
+    	id = #{id}
+  </select>
+  
+  
+  <select id="getEmail" resultType="String">
+    select 
+    	email 
+    from 
+    	account 
+    where 
+    	id = #{id}
+  </select>
+  
+  
+  <select id="getUser" resultType="kr.green.javaspring.dao.UserVO">
+    select 
+    	*
+    from 
+    	account 
+    where 
+    	id = #{id}
+  </select>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.green.javaspring.dao.BoardMapper">
+
+	<insert id="setBoard">
+
+		insert into board (
+			title
+			, contents
+			, author
+		) values (
+			#{title}
+			, #{contents}
+			, #{author}
+		)
+
+	</insert>
+
+	<select id="getBoards" resultType="kr.green.javaspring.dao.Board">
+		select 
+			*
+		from 
+			lim
+	</select>
+	
+	
+	
+	
+	
+</mapper>

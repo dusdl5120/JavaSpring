@@ -27,7 +27,7 @@
 			 위에 prefix의 value값을 저렇게 지정해준 폴더 하위 밑에 jsp파일들을 실행하라라는 의미 -->
 	</beans:bean>
 	
-	<context:component-scan base-package="kr.green.javaspring" />
+	<context:component-scan base-package="kr.green.javaspring.controller" />
 	
 	
 	

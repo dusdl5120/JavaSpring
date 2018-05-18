@@ -11,7 +11,7 @@
 </head>
 <body>
       <div>
-		<form method="post">
+		<form method="post" action="/joinTest">
 			<div>
 				<label for="user_name">이름</label> 
 				<input type="text" name="name" required />
