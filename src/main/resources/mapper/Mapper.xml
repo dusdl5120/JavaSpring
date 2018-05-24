@@ -43,6 +43,21 @@
   </select>
   
   
+  <insert id="setUser">
+    insert into account (
+    	id
+    	,passwd
+    	,email
+    )values(
+    	#{id}
+    	, #{passwd}
+    	,#{email}
+    )
+    
+  </insert>
+  
+  
+  
   
   
   

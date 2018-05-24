@@ -4,7 +4,7 @@
 
 	<insert id="setBoard">
 
-		insert into board (
+		insert into lim (
 			title
 			, contents
 			, author
@@ -23,7 +23,36 @@
 			lim
 	</select>
 	
+	<select id="getBoardById" resultType="kr.green.javaspring.dao.Board">
+		select 
+			*
+		from
+			lim
+		where 
+			number = #{number}
 	
+	</select>
+	
+	<update id="setUpdate">
+		update 
+			lim
+		set
+			title = #{title}
+	    	, contents = #{contents}
+	    	, author = #{author}
+	    where
+	    	number = #{number}
+ 	 </update>
+	
+	
+	<select id="getPageBoards" resultType="kr.green.javaspring.dao.Board"> 
+		select 
+			*
+		from
+			lim
+		limit
+			#{pageStart}, #{perPageNum}
+	</select>
 	
 	
 	

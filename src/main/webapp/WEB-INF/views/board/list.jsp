@@ -16,38 +16,46 @@
 </head>
 <body>
 	<div class="container">
-		<div class="row"> 
+		<div class="row">
 			<h3>게시판</h3>
 		</div>
 		<div class="row">
-		<table class="table table-dark table-striped">
-		    <thead>
-				<tr>
-		        	<th>번호</th>
-		        	<th>제목</th>
-		        	<th>작성자</th>
-		      	</tr>
-		    </thead>
-		    
-		    <tbody>
-		    	<!-- c:forEach 태그를 이용하여 리스트의 값을 하나씩 테이블 행에 출력 -->
-		    	<c:forEach var="board" items="${list}">
-			    	<tr>
-		    			<td>${board.number}</td>
-			        	<td><a href="#">${board.title}</a></td>
-			        	<td>${board.author}</td>
-			        </tr>
-		        </c:forEach>
-		    </tbody>
-		  </table>
-		  <a href="/main">
-		  	<button class="btn btn-default"> 홈 </button>
-		  </a>
-		  <a href="/board/write" style="margin: 0 0 0 10px;">
-		  	<button class="btn btn-default"> 글쓰기 </button>
-		  </a>
+			<table class="table table-dark table-striped">
+				<thead>
+					<tr>
+						<th>번호</th>
+						<th>제목</th>
+						<th>작성자</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<!-- c:forEach 태그를 이용하여 리스트의 값을 하나씩 테이블 행에 출력 -->
+					<c:forEach items="${list}" var="board">
+						<tr>
+							<td>${board.number}</td>
+							<td><a href="/board/detail?number=${board.number }">${board.title}</a></td>
+							<td>${board.author}</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+
+			<ul class="pagination">
+				<li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+				<li class="page-item"><a class="page-link" href="#">1</a></li>
+				<li class="page-item"><a class="page-link" href="#">2</a></li>
+				<li class="page-item"><a class="page-link" href="#">3</a></li>
+				<li class="page-item"><a class="page-link" href="#">Next</a></li>
+			</ul><br>
+
+			<a href="/">
+				<button class="btn btn-default">홈</button>
+			</a> <a href="/board/write" style="margin: 0 0 0 10px;">
+				<button class="btn btn-default">글쓰기</button>
+			</a>
 		</div>
 	</div>
-	
+
 </body>
 </html>
